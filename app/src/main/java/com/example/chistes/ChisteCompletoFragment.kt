@@ -21,7 +21,6 @@ class ChisteCompletoFragment : Fragment() {
         mBindind = FragmentChisteCompletoBinding.inflate(inflater, container, false)
         return mBindind.root
 
-
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
