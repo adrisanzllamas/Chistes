@@ -1,10 +1,13 @@
-package com.example.chistes
+package com.example.chistes.ui.views.adapters
 
 import android.content.Context
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
+import com.example.chistes.ui.views.models.Chiste
+import com.example.chistes.ui.utils.OnclickListener
+import com.example.chistes.R
 import com.example.chistes.databinding.ItemChisteBinding
 
 class ChistesAdapter(

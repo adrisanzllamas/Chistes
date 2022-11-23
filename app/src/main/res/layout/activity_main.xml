@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:id="@+id/maincontainer"
-    tools:context=".MainActivity">
+    tools:context=".ui.views.activities.MainActivity">
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recycler"
         android:layout_width="match_parent"
@@ -15,6 +15,17 @@
         app:layout_constraintBottom_toTopOf="@id/add"
         app:layout_constraintStart_toStartOf="parent">
     </androidx.recyclerview.widget.RecyclerView>
+    <ProgressBar
+        android:id="@+id/progress"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_margin="@dimen/default_dimen"
+        app:layout_constraintTop_toBottomOf="@id/recycler"
+        app:layout_constraintEnd_toStartOf="@id/add"
+        app:layout_constraintStart_toEndOf="@id/pulsartitle"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+    </ProgressBar>
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/add"
@@ -24,10 +35,28 @@
         android:backgroundTint="@color/white"
         android:src="@drawable/ic_baseline_add_reaction_24"
         android:layout_margin="@dimen/default_dimen"
+        app:layout_constraintTop_toBottomOf="@id/recycler"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintBottom_toBottomOf="parent">
 
     </com.google.android.material.floatingactionbutton.FloatingActionButton>
+
+    <TextView
+        android:id="@+id/pulsartitle"
+        android:layout_width="200dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="26dp"
+        android:layout_marginStart="@dimen/default_dimen"
+        android:layout_marginEnd="@dimen/default_dimen"
+        android:layout_marginBottom="@dimen/default_dimen"
+        android:text="@string/añadechiste"
+        android:textColor="@color/black"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/recycler"
+        app:layout_constraintStart_toStartOf="parent">
+
+    </TextView>
 
 
 

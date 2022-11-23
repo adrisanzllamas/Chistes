@@ -1,5 +1,6 @@
-package com.example.chistes
+package com.example.chistes.data.services
 
+import com.example.chistes.ui.utils.Constanst
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 

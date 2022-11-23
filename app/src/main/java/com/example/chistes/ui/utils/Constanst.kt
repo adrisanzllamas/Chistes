@@ -1,4 +1,4 @@
-package com.example.chistes
+package com.example.chistes.ui.utils
 
 object Constanst {
 

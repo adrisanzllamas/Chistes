@@ -1,4 +1,4 @@
-package com.example.chistes
+package com.example.chistes.ui.views.models
 
 data class Chiste(
     val id: Int=0,

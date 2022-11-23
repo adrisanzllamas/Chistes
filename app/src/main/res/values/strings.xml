@@ -2,4 +2,6 @@
     <string name="app_name">Chistes</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="punchline">Punchline</string>
+    <string name="añadechiste">Pulsa para añadir Chiste</string>
 </resources>
