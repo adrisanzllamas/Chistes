@@ -2,6 +2,7 @@ package com.example.chistes.ui.views.viewModels
 
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
+import androidx.lifecycle.viewModelScope
 import com.example.chistes.ui.views.models.Chiste
 import com.example.chistes.data.services.ApiClient
 import com.example.chistes.data.services.ApiService
@@ -24,7 +25,7 @@ class MainViewModel:ViewModel() {
 
     fun getAllChiste(){
         val retrofit= ApiClient().getApiClient()
-       CoroutineScope(Dispatchers.IO).launch {
+       viewModelScope.launch {
            val call=retrofit.create(ApiService::class.java).getChistes()
            if (call.isSuccessful){
                if (!(currentChiste.contains(call.body()))){
