@@ -1,12 +1,9 @@
-package com.example.chistes
+package com.example.chistes.ui.views.viewModels
 
-import android.util.Log
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
-import kotlinx.coroutines.CoroutineScope
-import kotlinx.coroutines.Dispatchers
-import retrofit2.Retrofit
+import com.example.chistes.ui.views.models.Chiste
 
 class FragmentChistesViewModel:ViewModel() {
 
