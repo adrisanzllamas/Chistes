@@ -14,7 +14,7 @@ class MainViewModel:ViewModel() {
 
     private var _ChisteLivedata:MutableLiveData<MutableList<Chiste>> = MutableLiveData()
     var chistesObservable:MutableLiveData<MutableList<Chiste>> =_ChisteLivedata
-    private var currentChiste:MutableList<Chiste> = mutableListOf()
+     var currentChiste:MutableList<Chiste> = mutableListOf()
 
 
     private var _ProgressLiveData:MutableLiveData<Boolean> = MutableLiveData()
@@ -28,7 +28,7 @@ class MainViewModel:ViewModel() {
        viewModelScope.launch {
            val call=retrofit.create(ApiService::class.java).getChistes()
            if (call.isSuccessful){
-               if (!(currentChiste.contains(call.body()))){
+               if (!(currentChiste.equals(call.body()))){
                    currentChiste.add(call.body()!!)
                    _ChisteLivedata.postValue(currentChiste)
                    _ProgressLiveData.postValue(false)
